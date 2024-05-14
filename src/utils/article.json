@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "title": "How Workday uses carbon offtake agreements to scale climate impact",
+        "subtitle": "The enterprise software provider is one of the large corporations signing offtake agreements with carbon reduction and removal projects.",
+        "text": "<p>Since January, Workday has signed three new offtake agreements with carbon projects, committing to purchase over 300,000 carbon credits over the next six years. By guaranteeing future demand, the enterprise software provider is helping to close the finance gap that holds back many high-impact carbon projects.</p>\n<p>The projects include forest protection in the Amazon with remote sensing, carbon removal via biochar in Namibia and an innovative approach to plugging orphaned oil and gas wells.</p>",
+        "author": {
+            "link": "https://www.greenbiz.com/margaret-morales",
+            "name": "Margaret Morales"
+        },
+        "thumb": {
+            "src": "https://www.greenbiz.com/sites/default/files/styles/16_9_cropped/public/2024-05/Workday%20Pleasanton.jpg?itok=zwVN77an",
+            "ref": "Workday"
+        },
+        "images": [
+            {
+                "src": "https://www.greenbiz.com/sites/default/files/2024-05/Carbon%20offtake%20diagrams.png",
+                "ref": "Patch"
+            }
+        ],
+        "createdAt": "2024-05-02",
+        "originalRef": "https://www.greenbiz.com/article/how-workday-uses-carbon-offtake-agreements-scale-climate-impact"
+    }
+]
