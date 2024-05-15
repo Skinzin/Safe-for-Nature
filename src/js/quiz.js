@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const btn = document.getElementsByClassName("btn");
 
+    console.log(searchQuiz.questions)
+
     formQuiz.innerHTML = `
         <h3>${searchQuiz.questions[0].title}</h3>
 
