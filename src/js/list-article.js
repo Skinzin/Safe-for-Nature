@@ -1,5 +1,5 @@
 // "use strict";
-import a from "../utils/article.json" with { type: "json" }; /* Informando ao interpretado que o arquivo é um JSON | IMPORT ASSERTION*/
+import articles from "../utils/article.json" with { type: "json" }; /* Informando ao interpretado que o arquivo é um JSON | IMPORT ASSERTION*/
 
 /* 
     1. Por que troquei Assert por WITH?

@@ -1,24 +1,21 @@
 [
     {
         "id": 1,
-        "title": "How Workday uses carbon offtake agreements to scale climate impact",
-        "subtitle": "The enterprise software provider is one of the large corporations signing offtake agreements with carbon reduction and removal projects.",
-        "text": "<p>Since January, Workday has signed three new offtake agreements with carbon projects, committing to purchase over 300,000 carbon credits over the next six years. By guaranteeing future demand, the enterprise software provider is helping to close the finance gap that holds back many high-impact carbon projects.</p>\n<p>The projects include forest protection in the Amazon with remote sensing, carbon removal via biochar in Namibia and an innovative approach to plugging orphaned oil and gas wells.</p>",
+        "title": "Como os investidores estão usando IA para tomar decisões financeiras sustentáveis melhores",
+        "subtitle": "Começa com uma análise de dados mais rápida e minuciosa.",
+        "content": "Profissionais de finanças sustentáveis dependem muito do acesso e da qualidade dos dados. Depois de décadas de coleta de dados ESG, eles são atormentados não pela falta de dados, mas por excesso de dados que nem sempre são úteis. Regulamentações de divulgação estão sendo moldadas para ajudar a resolver isso. Enquanto isso, a IA generativa — inteligência artificial que vai além da análise de dados para produzir novas informações — está surgindo como uma maneira de avaliar e investir em soluções climáticas menos óbvias de forma eficaz. Identificar investimentos potenciais Estratégias para financiar ativos que facilitem a transição energética claramente se enquadram na categoria de investimentos climáticos. Investir secularmente em soluções climáticas — termo do investimento para uma tendência ampla que persistirá por um longo tempo — requer uma avaliação mais sutil de indústrias, setores e diversos tipos de negócios. É aí que entra a IA generativa. Ações públicas e o investidor focado no clima, ScopeFour Capital, por exemplo, usa sua Taxonomia Climática para encontrar e investir em empresas que oferecem uma ou mais das cerca de 100 soluções climáticas inspiradas na lista de práticas e tecnologias do Projeto Drawdown que podem reduzir as concentrações de gases de efeito estufa. Determinar se a receita de uma empresa está ligada materialmente a essas soluções climáticas não pode ser facilmente identificado usando conjuntos de dados comerciais, disse Heather Beatty, CEO da ScopeFour Capital. Então, a empresa \"mapeia essas soluções climáticas para demonstrações financeiras e usa IA para determinar mais rapidamente a materialidade e realmente atribuir um número de receita às soluções\", disse Beatty. Examinar dados públicos A IA generativa também pode vasculhar informações disponíveis publicamente para encontrar empresas que podem estar incorporando soluções climáticas em seus negócios, mas foram ignoradas durante o exercício inicial de marcação, de acordo com Beatty. O movimento de uma empresa para investir em compromissos climáticos é a medida-chave de progresso na jornada de emissões líquidas zero de uma empresa. A análise de sentimentos — usando IA para discernir o tom emocional da mensagem climática — também pode ser um indicador útil. Por exemplo, a IA pode analisar transcrições de chamadas de ganhos das empresas para avaliar o tom da liderança ao discutir compromissos climáticos, trabalhar para abordar vários temas ESG, ou analisar observações sobre produtos ou serviços que possam se referir a soluções climáticas. Essa análise pode ser especialmente útil em um momento em que muitos líderes corporativos estão falando menos explicitamente sobre ESG. O acesso à IA ainda não revolucionou o dia-a-dia dos profissionais de finanças sustentáveis, mas com a demanda por licenças corporativas de IA generativa crescendo rapidamente, é apenas uma questão de tempo.",
         "author": {
-            "link": "https://www.greenbiz.com/margaret-morales",
-            "name": "Margaret Morales"
+          "link": "https://www.greenbiz.com/grant-harrison",
+          "name": "Grant Harrison"
         },
         "thumb": {
-            "src": "https://www.greenbiz.com/sites/default/files/styles/16_9_cropped/public/2024-05/Workday%20Pleasanton.jpg?itok=zwVN77an",
-            "ref": "Workday"
+          "src": "https://www.greenbiz.com/sites/default/files/styles/16_9_cropped/public/2024-05/shutterstock_1440907523.jpg?itok=ABA6dEfx",
+          "ref": "Image via Shutterstock/Gorodenkoff"
         },
-        "images": [
-            {
-                "src": "https://www.greenbiz.com/sites/default/files/2024-05/Carbon%20offtake%20diagrams.png",
-                "ref": "Patch"
-            }
-        ],
-        "createdAt": "2024-05-02",
-        "originalRef": "https://www.greenbiz.com/article/how-workday-uses-carbon-offtake-agreements-scale-climate-impact"
-    }
+        "images": [],
+        "createdAt": "2024-05-15",
+        "originRef": "https://www.greenbiz.com/article/how-ai-supports-investment-climate-solutions"
+      }
+      
+      
 ]
