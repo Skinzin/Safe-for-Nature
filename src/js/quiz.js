@@ -30,15 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     var i = 0;
     do {
-        console.log(searchQuiz.questions.length)
-        progressDiv.innerHTML += `<span>${i +1}</span>`
+        progressDiv.innerHTML += `<span class="quest-${i}">${i +1}</span>`
         i++
     } while (searchQuiz.questions.length > i);
 
 
     const btn = document.getElementsByClassName("btn");
-
-    console.log(searchQuiz.questions)
 
     formQuiz.innerHTML = `
         <h3>${searchQuiz.questions[0].title}</h3>
@@ -47,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ${searchQuiz.questions[0].options.map((question) => {
                 return `
                     <li>
-                        <button class="text-left" id="${question.id}">${question.awnser}</button>
+                        <button class="text-left" id="${question.id}">${question.answer}</button>
                     </li>
                 `
             }).join('')}
@@ -55,35 +52,39 @@ document.addEventListener("DOMContentLoaded", () => {
     `
 
     formQuiz.addEventListener("submit", (e) => {
-        e.preventDefault()
-        // console.log(e.submitter)
+        e.preventDefault();
 
         const getBtnID = parseInt(e.submitter.id);
 
-        if(searchQuiz.idVerifyAwnser == getBtnID) {
+        if(searchQuiz.questions[currentQuest - 1].correct_answer == getBtnID) {
             e.submitter.classList.add("correct");
+            document.getElementsByClassName(`quest-${currentQuest - 1}`)[0].classList.add("correct")
         } else {
             e.submitter.classList.add("incorrect");
-
-            // console.log(document.getElementById(searchQuiz.idVerifyAwnser).classList.add("correct"))
+            document.getElementsByClassName(`quest-${currentQuest - 1}`)[0].classList.add("incorrect")
+            document.getElementById(searchQuiz.questions[currentQuest - 1].correct_answer).classList.add("correct");
         }
 
-        setTimeout(() => {
-            currentQuest++;
-            formQuiz.innerHTML = `
-                <h3>${searchQuiz.questions[currentQuest - 1].title}</h3>
-
-                <ul class="options">
-                    ${searchQuiz.questions[currentQuest - 1].options.map((question) => {
-                        return `
-                            <li>
-                                <button class="text-left" id="${question.id}">${question.awnser}</button>
-                            </li>
-                        `
-                    }).join('')}
-                </ul>
-            `
-        }, 1500)
+        if(currentQuest !== searchQuiz.questions.length) {
+            setTimeout(() => {
+                currentQuest++;
+                formQuiz.innerHTML = `
+                    <h3>${searchQuiz.questions[currentQuest - 1].title}</h3>
+    
+                    <ul class="options">
+                        ${searchQuiz.questions[currentQuest - 1].options.map((question) => {
+                            return `
+                                <li>
+                                    <button class="text-left" id="${question.id}">${question.answer}</button>
+                                </li>
+                            `
+                        }).join('')}
+                    </ul>
+                `
+            }, 1500)
+        } else {
+            
+        }
 
         // searchQuiz[0].options.forEach(key => {
             // 
