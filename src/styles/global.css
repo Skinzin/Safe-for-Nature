@@ -313,6 +313,25 @@ input {
     height: fit-content !important;
 }
 
+#modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.281);
+    
+    position: absolute;
+    inset: 0;
+    z-index: 999;
+
+    & .content {
+        background-color: var(--white);
+        border: 1px solid var(--gray-200);
+        padding: 16px 12px;
+
+        border-radius: 8px;
+    }
+}
+
 /* .object-cover {
     object-fit: cover;
 } */
@@ -389,6 +408,16 @@ input {
     justify-content: center;
     flex-direction: row;
     gap: 8px;
+
+    & .correct {
+        border-color: #22c55e;
+        color: #22c55e;
+    }
+
+    & .incorrect {
+        border-color: #ef4444;
+        color: #ef4444;
+    }
 }
 
 #progress span {
