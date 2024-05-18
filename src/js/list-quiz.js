@@ -2,7 +2,7 @@ import listQuiz from "../utils/quiz.json" with { type: "json" }
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const divContainer = document.getElementsByClassName("container")[0]
+    const divContainer = document.getElementsByClassName("container-quiz")[0]
 
 
     divContainer.innerHTML += listQuiz.map((quiz) => `

@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "./";
     }
 
+    document.title = `${article.title} - Safe For Nature`
+
     const containerArticle = document.getElementById("container-article");
 
     function formatDate(date) {

@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // #################################################################################################################
 
+    document.title = `${searchQuiz.title} - Safe For Nature`;
+    
     const progressDiv = document.getElementById("progress");
     const formQuiz = document.getElementById("form-quiz");
     var answerCorret = 0;
