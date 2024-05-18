@@ -69,7 +69,7 @@ a {
     color: var(--gray-600);
 }
 
-p {
+p, figcaption, span {
     color: var(--zinc-500);
 }
 
@@ -125,7 +125,7 @@ header nav .navLink {
 
     &::after {
         content: "";
-        background-color: var(--sky-400);
+        background-color: #73A63F;
         width: 0;
         height: 2px;
 
@@ -191,7 +191,7 @@ header nav li:last-child {
 footer {
     /* margin: 100dvh 0; */
     margin-top: 8rem;
-    padding-top: 64px;
+    padding: 64px 0 32px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -206,7 +206,7 @@ footer {
     }
 
     & a {
-        color: #000;
+        color: var(--gray-200);
     }
 }
 /* .Footer */
@@ -252,6 +252,10 @@ input {
     display: flex;
 }
 
+.flex-1 {
+    flex: 1;
+}
+
 .block {
     display: block;
 }
@@ -269,12 +273,33 @@ input {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     background-color: var(--white);
     border: 1px solid var(--gray-200);
     border-radius: 8px;
     overflow: hidden;
-    max-width: 17.34rem;
-    max-height: 18.25rem;
+    max-width: 14.25rem;
+    width: 100%;
+    /* max-height: 28.25rem; */
+    height: 24.25rem;
+
+    & h3 {
+        line-height: 1.15;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+    & p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        margin-top: 0.4rem;
+    }
 
     & img {
         /* height: 50%; */
@@ -332,13 +357,47 @@ input {
     inset: 0;
     z-index: 999;
 
-    & .content {
+    & .modal-container {
         background-color: var(--white);
         border: 1px solid var(--gray-200);
-        padding: 16px 12px;
 
         border-radius: 8px;
+        min-width: 19.5rem;
+        max-width: 48rem;
     }
+
+    & .modal-header {
+        border-bottom: 1px solid var(--gray-300);
+        padding: 16px 12px 8px;
+    }
+
+    & .modal-content {
+        padding: 38px 12px 38px;
+    }
+
+    & .modal-footer {
+        display: flex;
+        border-top: 1px solid var(--gray-300);
+        padding: 8px 12px 8px;
+
+        & #repeat {
+            background-color: var(--gray-200) !important;
+            color: var(--gray-600) !important;
+        }
+        & button, & a {
+            border-radius: 4px;
+            background-color: #73A63F;
+            color: var(--gray-50);
+            padding: 8px;
+        }
+        & .actions { 
+            display: flex;
+            gap: 8px;
+            margin-left: auto; 
+        }
+    }
+
+    
 }
 
 .loader-container {
@@ -378,37 +437,44 @@ input {
     animation: grow var(--uib-speed) ease-in-out infinite;
 }
 
+.title {
+    margin: 12px 0;
+}
+
 /* .Components */
 
 /* Content */
 
 .labelFloat {
     position: relative;
+    width: 100%;
 
     & input {
         color: var(--zinc-600);
-        padding: 12px;
+        border-color: var(--gray-400);
+        padding: 8px;
         max-width: 800px;
         width: 100%;
+        height: fit-content;
     };
 
     & input:focus + label,
     & input:not(:placeholder-shown) + label {
         /* background: #000; */
-        top: -18px;
+        top: -8px;
         font-size: 14px;
     }
 
     & label {
         width: max-content;
-        background-color: var(--gray-400);
-        color: var(--zinc-600);
+        background-color: var(--gray-300);
+        color: var(--zinc-500);
         padding: 0 4px;
         user-select: none;
 
         position: absolute;
         left: 5px;
-        top: 1px;
+        top: 5px;
 
         transition: 150ms;
     }
@@ -418,13 +484,18 @@ input {
     display: flex;
     gap: 6rem;
 
-    background-color: var(--gray-400);
+    background-color: var(--gray-300);
+    border: 1px solid var(--gray-400);
     border-radius: 8px;
     padding: 2.12rem 5rem;
     margin: 4.6rem 0;
 
+    & div {
+        width: 100%;
+    }
+
     & p {
-        color: var(--gray-100);
+        color: var(--gray-500);
 
         max-width: 32rem;
     }
@@ -484,7 +555,11 @@ input {
 .card-main-news {
     position: relative;
 
-    &::after {
+    & img {
+        border-radius: 6px;
+    }
+
+    & a::after {
         content: "";
         width: 100%;
         height: 100%;
@@ -492,6 +567,7 @@ input {
         top: 0;
         left: 0;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+        border-radius: 6px;
         z-index: 1;
     }
 
@@ -503,6 +579,45 @@ input {
         color: white;
         padding: 0 12px;
     }
+}
+
+#container_recent h1, #container_most_read h1 {
+    margin-bottom: 6px;
+}
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.article-content h4 {
+    font-size: 18px;
+}
+
+.article-content ul, .article-content ol {
+    margin-left: 48px;
+}
+
+.article-content ul {
+    list-style-type: disc;
+}
+
+.article-content ol {
+    list-style-type: decimal;
+
+}
+
+.article-content a, .modal-content a {
+    color: #73A63F !important;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    text-decoration-color: #73A63F;
+}
+
+.related-articles {
+    margin-top: 28px;
 }
 
 .container-quiz {
@@ -518,6 +633,8 @@ input {
     display: flex;
     flex-direction: column;
     background-color: var(--zinc-200);
+    border: 1px solid var(--gray-300);
+    box-shadow: var(--shadow-sm);
 
     max-width: 291px;
     width: 100%;
@@ -533,7 +650,7 @@ input {
 
 .card-quiz .card-header {
     padding: 24px;
-    max-height: 5.6em;
+    max-height: 6.6em;
     height: 100%;
 }
 
@@ -560,6 +677,28 @@ input {
     background-color: var(--gray-50);
 }
 
+.card-quiz a:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.newsletter-register {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    & button {
+        background-color: #73A63F;
+        color: var(--gray-100);
+
+        padding: 8px 16px;
+        border-radius: 4px;
+
+        &:hover {
+            box-shadow: var(--shadow-md);
+        }
+    }
+}
+
 /* Scroll */
 ::-webkit-scrollbar {
     background-color: var(--gray-200);
@@ -573,6 +712,13 @@ input {
     margin: 0 4px;
 }
 /* .Scroll */
+
+/* Selection */
+::selection {
+    color: var(--gray-100);
+    background-color: #73A63F;
+}
+/* .Selection */
 
 
 

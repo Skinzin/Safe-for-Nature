@@ -1,5 +1,10 @@
 import listQuiz from "../utils/quiz.json" with { type: "json" }
+import { modal } from "../utils/utils.js";
 const URLParams = new URLSearchParams(window.location.search);
+
+function refreshScreen() {
+    location.reload();
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const progressDiv = document.getElementById("progress");
     const formQuiz = document.getElementById("form-quiz");
+    var answerCorret = 0;
 
     var i = 0;
     do {
@@ -57,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const getBtnID = parseInt(e.submitter.id);
 
         if(searchQuiz.questions[currentQuest - 1].correct_answer == getBtnID) {
+            answerCorret++
             e.submitter.classList.add("correct");
             document.getElementsByClassName(`quest-${currentQuest - 1}`)[0].classList.add("correct")
         } else {
@@ -66,6 +73,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if(currentQuest !== searchQuiz.questions.length) {
+            setTimeout(() => {
+                formQuiz.innerHTML = `
+                    <div class="loader-container">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                `
+            }, 1000)
             setTimeout(() => {
                 currentQuest++;
                 formQuiz.innerHTML = `
@@ -81,9 +98,27 @@ document.addEventListener("DOMContentLoaded", () => {
                         }).join('')}
                     </ul>
                 `
-            }, 1500)
+            }, 1600)
         } else {
-            
+            document.getElementById("modal").style.display = "flex";
+            modal.innerHTML = `
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <h2 class="title text-center">Fim do quiz!</h2>
+                    </div>
+                    <div class="modal-content">
+                        <p>Parabéns! Você finalizou este quiz e acertou ${answerCorret}/${searchQuiz.questions.length}!<br>Que tal dar uma olhadinha em nosso <a href="./">artigos</a> e ficar por dentro de tudo?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="actions">
+                            <button id="repeat">Fazer novamente</button>
+                            <a href="./quiz-list.html">Voltar</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.getElementById("repeat").addEventListener("click", refreshScreen)
+
         }
 
         // searchQuiz[0].options.forEach(key => {

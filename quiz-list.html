@@ -31,18 +31,50 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#newsletter">Inscreva-se</a>
+                    <a href="./#newsletter">Inscreva-se</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <a href="" target="_blank"></a>
         <div class="container container-quiz">
         </div>
     </main>
 
+    <footer>
+        <div>
+            <a href="./">
+                <img class="logo" src="./public/LOGO.png" alt="">
+            </a>
+            
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="./quiz-list.html">QUIZ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    
     <script src="src/js/list-quiz.js" type="module"></script>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 </html>
