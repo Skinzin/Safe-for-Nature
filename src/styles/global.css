@@ -608,7 +608,7 @@ input {
 
 }
 
-.article-content a, .modal-content a {
+.article-content a, .modal-content a, em a {
     color: #73A63F !important;
     text-decoration: underline;
     text-underline-offset: 3px;

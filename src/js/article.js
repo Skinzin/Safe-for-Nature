@@ -51,6 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class='article-content'>
                 ${convertContent(article.content)}
             </div>
+
+            <br>
+            <p><em>Este artigo foi retirado/referenciado, clique <a href="${article.originRef}">aqui</a></em></p>
         </div>
     `;
 
