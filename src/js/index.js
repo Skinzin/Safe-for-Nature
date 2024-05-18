@@ -9,22 +9,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const randomArticles = getRandomArticles(articles, 3);
 
     document.getElementById("first_notices").innerHTML = `
-        <div id="card-main-news" class="card-main-news" style="background-color: white; width: 100%; height: 548px;">
+        <div id="card-main-news" class="card-main-news">
             <a class="flex-1" href="./artigo.html?article=${randomArticles[0].id}">
-                <img style="object-fit: cover;" width="100%" height="100%" src="${randomArticles[0].thumb.src}" alt="${randomArticles[0].thumb.ref}">
+                <img class="object-cover" width="100%" height="100%" src="${randomArticles[0].thumb.src}" alt="${randomArticles[0].thumb.ref}">
                 <h2 class="title text-justify">${randomArticles[0].title}</h2>
             </a>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <div class="card-main-news" style="background-color: white; width: 437px; height: 269px;">
+        <div class="card-secondary-news">
+            <div class="card-main-news">
                 <a class="flex-1" href="./artigo.html?article=${randomArticles[1].id}">
-                    <img style="object-fit: fill;" width="100%" height="100%" src="${randomArticles[1].thumb.src}" alt="${randomArticles[1].thumb.ref}">
+                    <img class="object-cover" width="100%" height="100%" src="${randomArticles[1].thumb.src}" alt="${randomArticles[1].thumb.ref}">
                     <h2 class="title text-justify">${randomArticles[1].title}</h2>
                 </a>
             </div>
-            <div class="card-main-news" style="background-color: white; width: 437px; height: 269px;">
+            <div class="card-main-news">
                 <a class="flex-1" href="./artigo.html?article=${randomArticles[2].id}">
-                    <img style="object-fit: fill;" width="100%" height="100%" src="${randomArticles[2].thumb.src}" alt="${randomArticles[2].thumb.ref}">
+                    <img class="object-cover" width="100%" height="100%" src="${randomArticles[2].thumb.src}" alt="${randomArticles[2].thumb.ref}">
                     <h2 class="title text-justify">${randomArticles[2].title}</h2>
                 </a>
             </div>
