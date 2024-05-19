@@ -1,5 +1,5 @@
-import listQuiz from "../utils/quiz.json" with { type: "json" }
-import { modal } from "../utils/utils.js";
+// import listQuiz from "../utils/quiz.json" with { type: "json" }
+import { fetchListQuiz, modal } from "../utils/utils.js";
 const URLParams = new URLSearchParams(window.location.search);
 
 function refreshScreen() {
@@ -7,17 +7,12 @@ function refreshScreen() {
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    // fetch('./src/utils/article.json')
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         console.log(data);
-    //     })
-    //     .catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
+document.addEventListener("DOMContentLoaded", async () => {
+    var listQuiz = await fetchListQuiz();
+
     
     const getParamsID = URLParams.get("id");
     var currentQuest = 1;
-    
     if(!getParamsID) { 
         window.location.href = "./quiz-list.html"
     }

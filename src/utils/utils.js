@@ -1,3 +1,17 @@
+const modal = document.getElementById("modal");
+
+
+/**
+ * Função que retorna a lista de quiz
+ * @type {Array<{id: number, title: string, subtitle: string, content: string, author: Array<{link: string, name: string}>, thumb: {src: string, ref: string}, images: Array<{id: number, src: string, alt: string, source: string}>, createdAt: string, originRef: string, views: number}>}
+ */
+async function fetchListQuiz() {
+    var fetchListQuiz = await fetch('./src/utils/quiz.json')//.then(response => response.json())
+    var quiz = await fetchListQuiz.json();
+
+    return quiz;
+}
+
 /**
  * @returns {Array<{id: number, title: string, subtitle: string, content: string, author: Array<{link: string, name: string}>, thumb: {src: string, ref: string}, images: Array<{id: number, src: string, alt: string, source: string}>, createdAt: string, originRef: string, views: number}>}
   */
@@ -30,11 +44,11 @@ function cardGenerator(article) {
     `
 }
 
-const modal = document.getElementById("modal");
 
 export {
     getRandomArticles,
     cardGenerator,
-    modal
+    modal,
+    fetchListQuiz
 }
 
