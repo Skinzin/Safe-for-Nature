@@ -710,6 +710,7 @@ input {
     #newsletter {
         gap: 12px;
         flex-direction: column;
+        padding: 2.12rem 1.8rem;
     }
 
     .newsletter-register {
