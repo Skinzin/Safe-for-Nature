@@ -2,8 +2,8 @@
 import { cardGenerator, fetchListArticle, getRandomArticles } from "../utils/utils.js"
 const URLParams = new URLSearchParams(window.location.search);
 
-document.addEventListener("DOMContentLoaded", () => {
-    var listArticle = fetchListArticle();
+document.addEventListener("DOMContentLoaded", async () => {
+    var listArticle = await fetchListArticle();
     const getParamsID = URLParams.get("article");
     const article = listArticle.filter(article => article.id == getParamsID)[0];
     if(!getParamsID || !article) { 
