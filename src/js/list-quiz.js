@@ -1,7 +1,10 @@
-import listQuiz from "../utils/quiz.json" with { type: "json" }
+// import listQuiz from "../utils/quiz.json" with { type: "json" }
+
+import { fetchListQuiz } from "../utils/utils.js";
 
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    var listQuiz = await fetchListQuiz();
     const divContainer = document.getElementsByClassName("container-quiz")[0]
 
 

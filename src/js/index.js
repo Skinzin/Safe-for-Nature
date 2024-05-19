@@ -1,8 +1,9 @@
 // "use strict";
-import articles from "../utils/article.json" with { type: "json" }; /* Informando ao interpretado que o arquivo é um JSON | IMPORT ASSERTION*/
-import { cardGenerator, getRandomArticles, modal } from "../utils/utils.js";
+// import articles from "../utils/article.json" with { type: "json" }; /* Informando ao interpretado que o arquivo é um JSON | IMPORT ASSERTION*/
+import { cardGenerator, fetchListArticle, getRandomArticles, modal } from "../utils/utils.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    var articles = await fetchListArticle();
     const topViewedArticles = [...articles].sort((a, b) => b.views - a.views).slice(0, 5);
     const recentArticles = [...articles].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 5);
 

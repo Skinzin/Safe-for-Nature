@@ -1,8 +1,9 @@
-import listArticle from "../utils/article.json" with { type: "json" }; /* Informando ao interpretado que o arquivo é um JSON | IMPORT ASSERTION*/
-import { cardGenerator, getRandomArticles } from "../utils/utils.js"
+// import listArticle from "../utils/article.json" with { type: "json" }; /* Informando ao interpretado que o arquivo é um JSON | IMPORT ASSERTION*/
+import { cardGenerator, fetchListArticle, getRandomArticles } from "../utils/utils.js"
 const URLParams = new URLSearchParams(window.location.search);
 
 document.addEventListener("DOMContentLoaded", () => {
+    var listArticle = fetchListArticle();
     const getParamsID = URLParams.get("article");
     const article = listArticle.filter(article => article.id == getParamsID)[0];
     if(!getParamsID || !article) { 
