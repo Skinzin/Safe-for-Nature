@@ -598,6 +598,11 @@ input {
     text-decoration-color: #73A63F;
 }
 
+.article-content a:visited, .modal-content a:visited, em a:visited {
+    color: var(--sky-400) !important;
+    text-decoration-color: var(--sky-400);
+}
+
 .related-articles {
     margin-top: 28px;
 }

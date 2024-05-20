@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             </div>
 
             <br>
-            <p><em>Este artigo foi retirado/referenciado, clique <a href="${article.originRef}">aqui</a></em></p>
+            <p><em>Este artigo foi retirado/referenciado, clique <a href="${article.originRef}" target="_blank">aqui</a></em></p>
         </div>
     `;
 
