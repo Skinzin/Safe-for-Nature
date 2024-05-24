@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     const progressDiv = document.getElementById("progress");
     const formQuiz = document.getElementById("form-quiz");
+    document.getElementById("thumb").innerHTML = `<img class="thumb" width="100%" height="403" src="${searchQuiz.thumb}" alt="">`
     var answerCorret = 0;
 
     var i = 0;

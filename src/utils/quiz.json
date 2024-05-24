@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Quiz 1: Conceitos Básicos de ESG",
+    "thumb": "./public/quiz-img/adam-kool-ndN00KmbJ1c-unsplash.jpg",
     "questions": [
       {
         "title": "1. O que significa a sigla ESG?",
@@ -74,6 +75,7 @@
   {
     "id": 2,
     "title": "Quiz 2: Impacto Ambiental",
+    "thumb": "./public/quiz-img/feri-tasos-4GcU63RG7sI-unsplash.jpg",
     "questions": [
       {
         "title": "1. Qual das seguintes atividades NÃO está relacionada ao impacto ambiental?",
@@ -146,6 +148,7 @@
   {
     "id": 3,
     "title": "Quiz 3: Impacto Social",
+    "thumb": "./public/quiz-img/helena-lopes-PGnqT0rXWLs-unsplash.jpg",
     "questions": [
       {
         "title": "1. Qual é uma maneira pela qual as empresas podem contribuir para o impacto social positivo?",
@@ -192,6 +195,7 @@
   {
     "id": 4,
     "title": "Quiz 4: Ética nos Negócios",
+    "thumb": "./public/quiz-img/cytonn-photography-n95VMLxqM2I-unsplash.jpg",
     "questions": [
       {
         "title": "1. O que é ética nos negócios?",
@@ -260,6 +264,7 @@
   {
     "id": 5,
     "title": "Quiz 5: Investimento Sustentável",
+    "thumb": "./public/quiz-img/noah-buscher-x8ZStukS2PM-unsplash.jpg",
     "questions": [
       {
         "title": "1. O que é investimento sustentável?",
@@ -328,6 +333,7 @@
   {
     "id": 6,
     "title": "Quiz 6: Mudanças Climáticas",
+    "thumb": "./public/quiz-img/william-bossen-Q1js5z4tKLA-unsplash.jpg",
     "questions": [
       {
         "title": "1. O que são mudanças climáticas?",
@@ -378,6 +384,7 @@
   {
     "id": 7,
     "title": "Quiz 7: Sustentabilidade Corporativa",
+    "thumb": "./public/quiz-img/sean-pollock-PhYq704ffdA-unsplash.jpg",
     "questions": [
       {
         "title": "1. O que é sustentabilidade corporativa?",

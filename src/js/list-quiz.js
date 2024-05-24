@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h2 title="${quiz.title}" class="title">${quiz.title}</h2>
             </div>
 
-            <img class="object-cover" src="./public/adam-kool-ndN00KmbJ1c-unsplash.jpg" alt="">
+            <img class="object-cover" src="${quiz.thumb}" alt="">
 
             <a class="text-center" href="./quiz.html?id=${quiz.id}">Iniciar</a>
         </div>

@@ -3,7 +3,7 @@ const modal = document.getElementById("modal");
 
 /**
  * Function that returns the quiz list
- * @returns {Array<{id: number, title: string, questions: Array<{id: number, answer: string}>, correct_answer: number}>}
+ * @returns {Array<{id: number, title: string, thumb: string, questions: Array<{id: number, answer: string}>, correct_answer: number}>}
  */
 async function fetchListQuiz() {
     var fetchListQuiz = await fetch('./src/utils/quiz.json')//.then(response => response.json())
