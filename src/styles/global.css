@@ -135,7 +135,7 @@ header nav .navLink::after {
     transition-duration: 300ms;
 }
 
-header nav .navLink .currentScreen::after {
+header nav .navLink.currentScreen::after {
     width: 100%;
     opacity: 1;
 }
