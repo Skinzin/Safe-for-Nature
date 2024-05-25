@@ -682,6 +682,12 @@ input {
     box-shadow: var(--shadow-md);
 }
 
+.video_apresentacao {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+}
+
 /* Scroll */
 ::-webkit-scrollbar {
     background-color: var(--gray-200);

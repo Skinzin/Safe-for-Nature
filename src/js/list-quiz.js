@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     var listQuiz = await fetchListQuiz();
     const divContainer = document.getElementsByClassName("container-quiz")[0]
 
-
     divContainer.innerHTML += listQuiz.map((quiz) => `
         <div class="card-quiz">
             <div class="card-header">
