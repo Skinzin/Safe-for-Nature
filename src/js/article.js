@@ -47,7 +47,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             ` : ""}
             <p>${formatDate(article.createdAt)}</p>
             
-            <img class="thumb" width="100%" height="231" src="${article.thumb.src}" alt="${article.thumb.ref}">
+            <div id="thumb">
+                <img class="thumb" width="100%" height="231" src="${article.thumb.src}" alt="${article.thumb.ref}">
+                <span>${article.thumb.ref}</span>
+            </div>
         
             <div class='article-content'>
                 ${convertContent(article.content)}

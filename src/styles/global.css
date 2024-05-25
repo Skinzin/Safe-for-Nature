@@ -462,7 +462,15 @@ input {
 .thumb {
     object-fit: cover;
     border-radius: 8px;
-    margin: 28px 0;
+    margin: 28px 0 0px;
+}
+
+.thumb ~ span {
+    font-size: 12px;
+}
+
+#thumb {
+    margin-bottom: 28px;
 }
 
 .options {
